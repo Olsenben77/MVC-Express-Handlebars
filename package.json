@@ -1,0 +1,25 @@
+{
+  "name": "mvc-express-handlebars---burger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Olsenben77/MVC-Express-Handlebars---Burger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Olsenben77/MVC-Express-Handlebars---Burger/issues"
+  },
+  "homepage": "https://github.com/Olsenben77/MVC-Express-Handlebars---Burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql": "^2.18.1"
+  }
+}
