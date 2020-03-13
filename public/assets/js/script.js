@@ -1,17 +1,17 @@
 "use strict";
 
 $(function() {
-  $(".change-devour").on("click", function(event) {
+  $(".change-devoured").on("click", function(event) {
     const id = $(this).data("id");
-    const newDevour = $(this).data("newDevour");
+    const newDevour = $(this).attr("devour_state");
 
-    const newDevourState = {
-      devoured: newDevoured
+    let newDevouredState = {
+      devoured: newDevour
     };
 
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
-      data: newDevourState
+      data: newDevouredState
     }).then(function() {
       console.log("changed devour to", newDevour);
       location.reload();
@@ -29,12 +29,22 @@ $(function() {
         .val()
         .trim()
     };
-
+    console.log("newburger", newBurger);
     $.ajax("/api/burgers", {
       type: "POST",
       data: newBurger
     }).then(function() {
       console.log("created new burger");
+      location.reload();
+    });
+  });
+  $(".delete-burger").on("click", function(event) {
+    const id = $(this).data("id");
+
+    $.ajax("/api/burgers/" + id, {
+      type: "DELETE"
+    }).then(function() {
+      console.log("deleted burger", id);
       location.reload();
     });
   });

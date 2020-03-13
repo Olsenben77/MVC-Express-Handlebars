@@ -1,36 +1,27 @@
-{{!-- Following the cats.js example, I tried to include 
-the "block" section along with the "burger-block" under
-the partials folder. These were both unresponsive and
-brought up an error everytime loading to the server.
-If I could, I would like help figuring that section
-out during office hours. Thanks! --}}
-
-
-<img class="img-fluid port-image" src="assets/js/burger.png" alt="" width="300">
+<img class="img-fluid port-image" src="assets/js/sam_jackson.gif" alt="" width="300">
 
 <div class="plate">
-    <p class="script"><span>Welcome to the</span></p>
-    <p class="shadow text1">Burger Spot</p>
+    <p class="script"><span>Welcome to </span></p>
+    <p class="shadow text1">Big Kahuna </p>
+    <p class="shadow text1">Burger </p>
 </div>
 
-<h2>Burgers that have not been eaten!</h2>
+<h2>That is a tasty burger!</h2>
 
 <ul>
     {{#each burgers}}
     {{#unless devoured}}
-    {{!-- This code broke the server
-    {{> burgers/burger-block devoured=true}} --}}
+    {{> burger-block devoured = true}}
     {{/unless}}
     {{/each}}
 </ul>
 
-<h2>Burgers that are eaten!</h2>
+<h2>Clean your plate!</h2>
 
 <ul>
     {{#each burgers}}
     {{#if devoured}}
-    {{!-- //This code broke the server
-    {{> burgers/burger-block devour=false}} --}}
+    {{> delete-block devoured = false}}
     {{/if}}
     {{/each}}
 </ul>

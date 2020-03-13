@@ -1,9 +1,6 @@
 "use strict";
 
 const connection = require("../config/connection.js");
-// selectAll();
-// insertOne();
-// updateOne();
 function printQuestionMarks(num) {
   const arr = [];
 
@@ -68,6 +65,19 @@ const orm = {
     queryString += condition;
 
     console.log(queryString);
+    connection.query(queryString, (err, result) => {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
+  },
+  delete: function(table, condition, cb) {
+    let queryString = "DELETE FROM " + table;
+    queryString += " WHERE ";
+    queryString += condition;
+
     connection.query(queryString, (err, result) => {
       if (err) {
         throw err;

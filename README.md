@@ -9,6 +9,8 @@
 
 ## User Story
 
+![Home](assets/js/Virus-wars-main-screen-wm)
+
 As a consumer
 
 I want to be able to order, add, and update various food orders of my choosing
