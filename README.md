@@ -9,7 +9,7 @@
 
 ## User Story
 
-![Home](assets/js/Virus-wars-main-screen-wm)
+![Home](assets/js/Screenshot)
 
 As a consumer
 
