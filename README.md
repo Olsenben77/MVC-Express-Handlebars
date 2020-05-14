@@ -9,7 +9,7 @@
 
 ## User Story
 
-![Home](assets/js/Screenshot)
+![Home](assets/js/Screenshot.png)
 
 As a consumer
 
